@@ -1,64 +1,90 @@
-.container {
-  text-align: center; /* Centraliza o conteúdo dentro do elemento com a classe "container" */
+/* Estilos gerais */
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
+/* Estilos para o cronômetro */
 .timer {
   font-size: 48px;
-  margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels ao elemento com a classe "timer" */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.options button {
-  font-size: 24px;
-  padding: 10px 20px;
-  margin-right: 10px; /* Define o tamanho da fonte, preenchimento interno e margem direita para os botões dentro do elemento com a classe "options" */
+.options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.mode {
-  margin-top: 20px; /* Adiciona uma margem superior de 20 pixels ao elemento com a classe "mode" */
-}
-
-.mode label {
-  margin-right: 10px; /* Adiciona uma margem direita de 10 pixels aos rótulos dentro do elemento com a classe "mode" */
-}
-
-#countdownTime {
-  margin-top: 10px;
-  font-size: 16px;
-  padding: 5px; /* Adiciona uma margem superior de 10 pixels, define o tamanho da fonte e o preenchimento interno para o elemento com o ID "countdownTime" */
-}
-
-@keyframes pulsate {
-  0% {
-    transform: scale(1); /* Define a escala inicial da animação "pulsate" como 1 */
-  }
-  50% {
-    transform: scale(1.2); /* Define a escala intermediária da animação "pulsate" como 1.2 */
-  }
-  100% {
-    transform: scale(1); /* Define a escala final da animação "pulsate" como 1 */
-  }
-}
-
-.pulsate {
-  animation: pulsate 2s infinite; /* Aplica a animação "pulsate" com duração de 2 segundos e repetição infinita ao elemento com a classe "pulsate" */
-}
-
-/* Estilização dos botões */
 .options button {
   font-size: 24px;
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: #4CAF50; /* Define a cor de fundo padrão para os botões */
-  color: white; /* Define a cor do texto dos botões como branco */
-  border: none; /* Remove a borda dos botões */
-  cursor: pointer; /* Altera o cursor para um ponteiro ao passar o mouse sobre os botões */
-  transition: background-color 0.3s ease; /* Adiciona um efeito de transição suave para a cor de fundo dos botões */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .options button:hover {
-  background-color: #45a000; /* Define a cor de fundo dos botões ao passar o mouse sobre eles */
+  background-color: #45a000;
 }
 
 .options button:active {
-  background-color: #acf00e; /* Define a cor de fundo dos botões ao serem pressionados */
+  background-color: #acf00e;
+}
+
+/* Estilos para o contador regressivo */
+.mode {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+}
+
+.mode label {
+  margin-right: 10px;
+  justify-content: center;
+}
+
+#countdownTime {
+  margin-top: 10px;
+  justify-content: center;
+  font-size: 16px;
+  padding: 5px;
+}
+
+/* Estilos para a grade de flexbox */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  flex: 1;
+  padding: 0 15px;
+}
+
+/* Estilos para a responsividade */
+@media screen and (max-width: 768px) {
+  .timer {
+    font-size: 36px;
+  }
+
+  .options button {
+    font-size: 20px;
+  }
+
+  .mode label {
+    font-size: 14px;
+  }
 }
