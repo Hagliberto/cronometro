@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projeto Cronometro - Javascript</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Projeto Cronometro</h1>
+    <div class="timer">
+      <span id="minutes">00</span>:<span id="seconds">00</span>
+    </div>
+    <div class="options">
+      <button id="startButton">Começar!</button>
+      <button id="resetButton">Resetar</button>
+    </div>
+    <div class="mode">
+      <input type="radio" id="chronometer" name="mode" value="chronometer" checked>
+      <label for="chronometer">Cronômetro</label>
+      <input type="radio" id="countdown" name="mode" value="countdown">
+      <label for="countdown">Contador Regressivo</label>
+      <input type="number" id="countdownTime" placeholder="Tempo (segundos)">
+    </div>
+  </div>
+
+  <audio id="alarmSound" src="alarm.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
