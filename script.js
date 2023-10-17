@@ -60,6 +60,8 @@ function pad(val) {
 function playAlarm() {
   alarmSound.play(); // Reproduz o som do alarme
   alert('Tempo esgotado!'); // Exibe um alerta informando que o tempo acabou
+  alarmSound.pause(); // Pausa a reprodução do som do alarme
+  alarmSound.currentTime = 0; // Reinicia o áudio para o início
 }
 
 startButton.addEventListener('click', startTimer); // Adiciona um ouvinte de evento ao botão "Começar!" para iniciar o timer
