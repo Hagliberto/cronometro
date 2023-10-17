@@ -1,0 +1,28 @@
+.container {
+    text-align: center;
+  }
+  
+  .timer {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .options button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+  
+  .mode {
+    margin-top: 20px;
+  }
+  
+  .mode label {
+    margin-right: 10px;
+  }
+  
+  #countdownTime {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+  }
